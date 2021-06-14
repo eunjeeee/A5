@@ -8,9 +8,8 @@
 </p>
 
 #### Initials
-- ligth fiedl 이미지 로드 후 5차원 배열 L(u; v; s; t; c) 생성
+- ligth field 이미지 로드 후 5차원 배열 L(u; v; s; t; c) 생성
 - u와 v는 aperture, s와 t는 lenslet array, c는 color channels
-
 
 ```matlab
 img = imread('chessboard_lightfield.png');
@@ -19,8 +18,8 @@ u = 16;
 v = 16; 
 s = h/u;
 t = w/v;
-
 lightfield = zeros(u, v, s, t, c);
+
 for i = 1:s
     for j = 1:t
         for x = 1:u
@@ -35,8 +34,8 @@ end
 ```
 
 #### Sub-aperture views
-
-
+- 이미지의 픽셀을 재배열하여 여러 뷰의 이미지 생성 가능
+- sub aperture을 이용하여 2D mosaic 이미지 생성
 
 ```matlab
 mosaic = zeros(h, w, c);
@@ -80,6 +79,16 @@ for d = 0:0.2:2
     depth{end + 1} = combine;
 end
 ```
+
+<p align='center'>
+  <img src='./image/03.PNG' width="650px">
+  <figcaption>Fig 3. Refocusing at different depths. Left: d=0. Right: d=2 </figcaption>
+</p>
+
+<p align='center'>
+  <img src='./image/02.PNG' width="650px">
+  <figcaption>Fig 4. Refocusing at different depths. </figcaption>
+</p>
 
 #### All-focus image and depth from defocus
 
