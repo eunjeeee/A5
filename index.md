@@ -92,6 +92,10 @@ end
 
 #### All-focus image and depth from defocus
 
+<p align='left'>
+  <img src='./image/04.PNG' width="600px">
+</p>
+
 ```matlab
 for d = 1:11
     luminance{end + 1} = rgb2xyz(depth{d}, 'ColorSpace', 'srgb');
