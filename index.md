@@ -105,15 +105,15 @@ end
 
 - focal stack을 all-focus 이미지로 병합
 - focal stack의 luminance, low, high, sparpness에 대하여 계산
-- sigma1 = 2.5, sigma2 = 4 로 입력
+- 최적의 sigma 값들을 찾고자 함
 
 ```matlab
 for d = 1:11
     luminance{end + 1} = rgb2xyz(depth{d}, 'ColorSpace', 'srgb');
     luminance{end} = luminance{end}(:, :, 2);
-    low{end + 1} = imgaussfilt(luminance{end}, 2.5);
+    low{end + 1} = imgaussfilt(luminance{end}, 2);
     high{end + 1} = luminance{end} - low{end};
-    sharpness{end + 1} = imgaussfilt(high{end} .^ 2, 4);
+    sharpness{end + 1} = imgaussfilt(high{end} .^ 2, 5);
 end
 ```
 
@@ -137,11 +137,11 @@ depth_gray = zeros(s, t);
 ```
 
 <p align='center'>
-  <img src='./image/all_focus.png' width="500px">
-  <figcaption>Fig 5. All focus image for one set of sigma1=2.5, sigma2=4. </figcaption>
+  <img src='./image/all_focus2_5.png' width="500px">
+  <figcaption>Fig 5. All focus image for one set of sigma1=2, sigma2=5. </figcaption>
 </p>
 
 <p align='center'>
-  <img src='./image/depth.png' width="500px">
+  <img src='./image/depth2_5.png' width="500px">
   <figcaption>Fig 6. Corresponding depth map. </figcaption>
 </p>
