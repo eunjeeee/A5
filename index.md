@@ -52,6 +52,9 @@ end
 </p>
 
 #### Refocusing and focal-stack generation
+- depth를 바꿔가며 초점을 맞춤
+- <p> <img src='./image/05.PNG' width="200px"> </p>
+
 
 ```matlab
 depth = {};
@@ -101,9 +104,7 @@ for d = 1:11
     luminance{end + 1} = rgb2xyz(depth{d}, 'ColorSpace', 'srgb');
     luminance{end} = luminance{end}(:, :, 2);
     low{end + 1} = imgaussfilt(luminance{end}, 2.5);
-    % Get high frequency
     high{end + 1} = luminance{end} - low{end};
-    % Get sharpness
     sharpness{end + 1} = imgaussfilt(high{end} .^ 2, 4);
 end
 ```
