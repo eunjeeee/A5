@@ -140,5 +140,5 @@ depth_gray = zeros(s, t);
 
 <p align='center'>
   <img src='./image/depth.png' width="500px">
-  <figcaption>Fig 7. Corresponding depth map. </figcaption>
+  <figcaption>Fig 6. Corresponding depth map. </figcaption>
 </p>
