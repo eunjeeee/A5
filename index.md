@@ -3,11 +3,13 @@
 ### Light Field Rendering, Focal Stacks, and Deph from Defocus
 
 <p align='center'>
-  <img src='./image/01.PNG' width="800px">
+  <img src='./image/01.PNG' width="700px">
   <figcaption>Fig 1. The chessboard scene light_eld. Left: Crop of the light_eld image. Right: A pinhole camera view of the scene. </figcaption>
 </p>
 
 #### Initials
+
+
 
 ```matlab
 img = imread('chessboard_lightfield.png');
@@ -45,7 +47,7 @@ end
 ```
 
 <p align='center'>
-  <img src='./image/mosaic.png' width="800px">
+  <img src='./image/mosaic.png' width="700px">
   <figcaption>Fig 2. Mosaic of sub-aperture views. </figcaption>
 </p>
 
