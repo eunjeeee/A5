@@ -53,7 +53,8 @@ end
 
 #### Refocusing and focal-stack generation
 - depth를 바꿔가며 초점을 맞춤
-- <p> <img src='./image/05.PNG' width="200px"> </p>
+- d=0  : <p> <img src='./image/05.PNG' width="200px"> </p>
+- d≠0  : <p> <img src='./image/06.PNG' width="360px"> </p>
 
 
 ```matlab
