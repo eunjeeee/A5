@@ -3,12 +3,13 @@
 ### Light Field Rendering, Focal Stacks, and Deph from Defocus
 
 <p align='center'>
-  <img src='./image/01.PNG' width="700px">
+  <img src='./image/01.PNG' width="600px">
   <figcaption>Fig 1. The chessboard scene light_eld. Left: Crop of the light_eld image. Right: A pinhole camera view of the scene. </figcaption>
 </p>
 
 #### Initials
-
+- ligth fiedl 이미지 로드 후 5차원 배열 L(u; v; s; t; c) 생성
+- u와 v는 aperture, s와 t는 lenslet array, c는 color channels
 
 
 ```matlab
@@ -47,7 +48,7 @@ end
 ```
 
 <p align='center'>
-  <img src='./image/mosaic.png' width="700px">
+  <img src='./image/mosaic.png' width="600px">
   <figcaption>Fig 2. Mosaic of sub-aperture views. </figcaption>
 </p>
 
