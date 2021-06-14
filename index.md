@@ -103,6 +103,7 @@ end
   <img src='./image/04.PNG' width="600px">
 </p>
 
+- focal stack을 all-focus 이미지로 병합
 - focal stack의 luminance, low, high, sparpness에 대하여 계산
 - sigma1 = 2.5, sigma2 = 4 로 입력
 
