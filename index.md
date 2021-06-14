@@ -103,6 +103,9 @@ end
   <img src='./image/04.PNG' width="600px">
 </p>
 
+- focal stack의 luminance, low, high, sparpness에 대하여 계산
+- sigma1 = 2.5, sigma2 = 4 로 입력
+
 ```matlab
 for d = 1:11
     luminance{end + 1} = rgb2xyz(depth{d}, 'ColorSpace', 'srgb');
@@ -134,7 +137,7 @@ depth_gray = zeros(s, t);
 
 <p align='center'>
   <img src='./image/all_focus.png' width="500px">
-  <figcaption>Fig 5. All focus image for one set of sigma1, sigma2 values. </figcaption>
+  <figcaption>Fig 5. All focus image for one set of sigma1=2.5, sigma2=4. </figcaption>
 </p>
 
 <p align='center'>
