@@ -39,7 +39,10 @@ for i = 1:u
     end
 end
 ```
-
+<p align='center'>
+  <img src='./image/mosaic.png'>
+  <figcaption>Fig 2. Mosaic of sub-aperture views. </figcaption>
+</p>
 
 #### Refocusing and focal-stack generation
 
