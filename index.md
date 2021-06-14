@@ -128,3 +128,13 @@ depth_gray = zeros(s, t);
      end
  end
 ```
+
+<p align='center'>
+  <img src='./image/all_focus.png' width="500px">
+  <figcaption>Fig 5. All focus image for one set of sigma1, sigma2 values. </figcaption>
+</p>
+
+<p align='center'>
+  <img src='./image/depth.png' width="500px">
+  <figcaption>Fig 7. Corresponding depth map. </figcaption>
+</p>
