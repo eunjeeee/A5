@@ -1,11 +1,14 @@
 ## Assignment 5
 
 ### Light Field Rendering, Focal Stacks, and Deph from Defocus
+
 <p align='center'>
   <img src='./image/01.PNG'>
   <figcaption>Fig 1. The chessboard scene light_eld. Left: Crop of the light_eld image. Right: A pinhole camera view of the scene. </figcaption>
 </p>
+
 #### Initials
+
 ```matlab
 img = imread('chessboard_lightfield.png');
 [h,w,c] = size(img);
@@ -27,6 +30,7 @@ for i = 1:s
     end
 end
 ```
+
 #### Sub-aperture views
 
 
@@ -39,6 +43,7 @@ for i = 1:u
     end
 end
 ```
+
 <p align='center'>
   <img src='./image/mosaic.png'>
   <figcaption>Fig 2. Mosaic of sub-aperture views. </figcaption>
@@ -74,6 +79,7 @@ end
 ```
 
 #### All-focus image and depth from defocus
+
 ```matlab
 for d = 1:11
     luminance{end + 1} = rgb2xyz(depth{d}, 'ColorSpace', 'srgb');
